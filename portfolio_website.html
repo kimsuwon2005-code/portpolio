@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김수원 | 포트폴리오 (Suwon Kim)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0b192c',
+                            900: '#000f24',
+                            950: '#000814',
+                        },
+                        accent: {
+                            blue: '#0077b6',
+                            cyan: '#00b4d8',
+                            gold: '#f7a072',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Pretendard', 'Noto Sans KR', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #000814;
+            color: #f1f5f9;
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 bg-grid min-h-screen selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2 font-bold text-xl tracking-wider text-white">
+                    <i data-lucide="anchor" class="text-cyan-400 w-6 h-6"></i>
+                    <span>SUWON KIM</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#about" class="hover:text-cyan-400 transition-colors">소개</a>
+                    <a href="#physical" class="hover:text-cyan-400 transition-colors">체력 & 피지컬</a>
+                    <a href="#certs" class="hover:text-cyan-400 transition-colors">자격 및 교육</a>
+                    <a href="#education" class="hover:text-cyan-400 transition-colors">학력 & 리더십</a>
+                    <a href="#vision" class="hover:text-cyan-400 transition-colors">비전</a>
+                </div>
+                <div>
+                    <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500 hover:text-slate-950 transition-all flex items-center gap-2">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i> 연락하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-cyan-950/20 via-transparent to-navy-950 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-medium text-cyan-400 mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+                미래의 해군 특전(UDT/SEAL) 장교를 향하여
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                강인한 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">신체와 리더십</span>으로<br>
+                목표를 향해 정진합니다.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-10 leading-relaxed">
+                서경대학교 군사학과 & 스포츠앤테크놀로지 복수전공.<br>
+                체계적인 신체 단련과 리더십을 바탕으로 한계를 극복하는 김수원입니다.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
+                <div class="bg-navy-900/60 border border-slate-800 p-4 rounded-xl text-center backdrop-blur">
+                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">소속</p>
+                    <p class="font-bold text-white text-sm sm:text-base">서경대 군사학과</p>
+                </div>
+                <div class="bg-navy-900/60 border border-slate-800 p-4 rounded-xl text-center backdrop-blur">
+                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">직책</p>
+                    <p class="font-bold text-cyan-400 text-sm sm:text-base">부학생회장</p>
+                </div>
+                <div class="bg-navy-900/60 border border-slate-800 p-4 rounded-xl text-center backdrop-blur">
+                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">체력검정</p>
+                    <p class="font-bold text-white text-sm sm:text-base">국민체력100 1등급</p>
+                </div>
+                <div class="bg-navy-900/60 border border-slate-800 p-4 rounded-xl text-center backdrop-blur">
+                    <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">체중 개조</p>
+                    <p class="font-bold text-emerald-400 text-sm sm:text-base">59kg ➔ 78kg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 border-t border-slate-800/80 bg-navy-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-2 bg-cyan-500/10 rounded-lg text-cyan-400">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white">프로필 & 인적사항</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-navy-900/80 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold text-white mb-4 border-b border-slate-800 pb-3 flex items-center gap-2">
+                        <i data-lucide="id-card" class="w-4 h-4 text-cyan-400"></i> 기본 정보
+                    </h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex justify-between py-1 border-b border-slate-800/50">
+                            <span class="text-slate-400">이름</span>
+                            <span class="font-semibold text-slate-100">김수원</span>
+                        </li>
+                        <li class="flex justify-between py-1 border-b border-slate-800/50">
+                            <span class="text-slate-400">생년월일</span>
+                            <span class="font-semibold text-slate-100">2005년 2월 15일</span>
+                        </li>
+                        <li class="flex justify-between py-1 border-b border-slate-800/50">
+                            <span class="text-slate-400">주 전공</span>
+                            <span class="font-semibold text-slate-100">서경대학교 군사학과 (재학)</span>
+                        </li>
+                        <li class="flex justify-between py-1 border-b border-slate-800/50">
+                            <span class="text-slate-400">복수 전공</span>
+                            <span class="font-semibold text-cyan-300">스포츠앤테크놀로지</span>
+                        </li>
+                        <li class="flex justify-between py-1">
+                            <span class="text-slate-400">연락처</span>
+                            <span class="font-semibold text-slate-100">010-4088-174x</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4 border-b border-slate-800 pb-3 flex items-center gap-2">
+                            <i data-lucide="target" class="w-4 h-4 text-cyan-400"></i> 관심 분야 & 목표
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                            군사학 분야의 전략·지휘 이론과 스포츠앤테크놀로지 분야의 신체 과학 메커니즘을 결합하여, 실전에서 압도적인 수행 능력을 발휘하는 정예 지휘관을 꿈꿉니다.
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-slate-800/50 border border-slate-700/50 rounded-xl flex items-center gap-3">
+                            <i data-lucide="flame" class="w-5 h-5 text-orange-400"></i>
+                            <span class="text-xs font-semibold text-slate-200">고강도 크로스핏 및 택티컬 트레이닝</span>
+                        </div>
+                        <div class="p-3 bg-slate-800/50 border border-slate-700/50 rounded-xl flex items-center gap-3">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-cyan-400"></i>
+                            <span class="text-xs font-semibold text-slate-200">해군 특전부대(UDT/SEAL) 장교 임관</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Physical Performance Section -->
+    <section id="physical" class="py-16 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
+                    <i data-lucide="activity" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white">체력 & 피지컬 트랜스포메이션</h2>
+            </div>
+
+            <!-- Weight Progress Bar Card -->
+            <div class="bg-navy-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8">
+                <h3 class="text-lg font-semibold text-white mb-2">체격 개조 프로젝트 (Physical Transformation)</h3>
+                <p class="text-xs text-slate-400 mb-6">특수임무 수행을 위한 꾸준한 운동과 식단 관리의 결과</p>
+                
+                <div class="relative pt-6 pb-2">
+                    <div class="flex justify-between items-end mb-2">
+                        <div class="text-left">
+                            <span class="text-xs text-slate-400 block">초기 체중</span>
+                            <span class="text-xl font-bold text-slate-400">59 kg</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-bold mb-1">
+                                +19 kg 증량 성과
+                            </span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-slate-400 block">현재 체중</span>
+                            <span class="text-2xl font-extrabold text-emerald-400">78 kg</span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-3 text-xs flex rounded-full bg-slate-800">
+                        <div style="width: 100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-slate-600 via-cyan-500 to-emerald-400"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workout Details Grid -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-navy-900/60 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
+                    <div class="p-3 bg-cyan-500/10 rounded-lg text-cyan-400">
+                        <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">헬스 / 웨이트 트레이닝 (2년)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            근력 증진 및 체계적인 신체 과부하 훈련을 통한 기초 근골격 강화 및 피지컬 프레임 구축.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-navy-900/60 border border-slate-800 rounded-xl p-6 flex items-start gap-4">
+                    <div class="p-3 bg-orange-500/10 rounded-lg text-orange-400">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white mb-1">크로스핏 (1년)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            고강도 기능성 운동으로 극강의 심폐지구력, 전신 근지구력 및 불굴의 정신력(Mental) 함양.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certs" class="py-16 border-t border-slate-800/80 bg-navy-900/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-2 bg-cyan-500/10 rounded-lg text-cyan-400">
+                    <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white">보유 자격증 & 교육 수료</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-navy-900/80 border border-slate-800 p-5 rounded-xl hover:border-cyan-500/50 transition-colors">
+                    <div class="p-2 bg-blue-500/10 text-blue-400 rounded-lg w-fit mb-3">
+                        <i data-lucide="waves" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">수상구조사 1급</h3>
+                    <p class="text-xs text-cyan-400 font-semibold mb-2">교육 수료</p>
+                    <p class="text-xs text-slate-400">수중 인명구조 및 높은 수준의 수영 수행 능력 보유</p>
+                </div>
+
+                <div class="bg-navy-900/80 border border-slate-800 p-5 rounded-xl hover:border-cyan-500/50 transition-colors">
+                    <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg w-fit mb-3">
+                        <i data-lucide="medal" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">국민체력100</h3>
+                    <p class="text-xs text-emerald-400 font-semibold mb-2">1등급 취득</p>
+                    <p class="text-xs text-slate-400">국가 공인 최상위 수준 기초 체력 및 신체 능력 검증</p>
+                </div>
+
+                <div class="bg-navy-900/80 border border-slate-800 p-5 rounded-xl hover:border-cyan-500/50 transition-colors">
+                    <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg w-fit mb-3">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">한국사능력검정시험</h3>
+                    <p class="text-xs text-amber-400 font-semibold mb-2">3급 취득</p>
+                    <p class="text-xs text-slate-400">장교로서 갖춰야 할 국가관 및 올바른 역사관 함양</p>
+                </div>
+
+                <div class="bg-navy-900/80 border border-slate-800 p-5 rounded-xl hover:border-cyan-500/50 transition-colors">
+                    <div class="p-2 bg-purple-500/10 text-purple-400 rounded-lg w-fit mb-3">
+                        <i data-lucide="laptop" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-sm mb-1">PCT 자격</h3>
+                    <p class="text-xs text-purple-400 font-semibold mb-2">자격 보유</p>
+                    <p class="text-xs text-slate-400">정보화 및 기초 컴퓨터 활용 실무 역량 보유</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Leadership Section -->
+    <section id="education" class="py-16 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Education Timeline -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="p-2 bg-cyan-500/10 rounded-lg text-cyan-400">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">학력 (Education)</h2>
+                    </div>
+
+                    <div class="relative border-l border-slate-800 pl-6 space-y-6">
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-cyan-400 ring-4 ring-navy-950"></span>
+                            <span class="text-xs text-cyan-400 font-semibold">재학 중</span>
+                            <h3 class="text-base font-bold text-white">서경대학교</h3>
+                            <p class="text-xs text-slate-300">군사학과 (복수전공: 스포츠앤테크놀로지)</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-navy-950"></span>
+                            <span class="text-xs text-slate-400">졸업</span>
+                            <h3 class="text-base font-bold text-white">경동고등학교</h3>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-navy-950"></span>
+                            <span class="text-xs text-slate-400">졸업</span>
+                            <h3 class="text-base font-bold text-white">홍익대학교사범대학부속중학교</h3>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-700 ring-4 ring-navy-950"></span>
+                            <span class="text-xs text-slate-400">졸업</span>
+                            <h3 class="text-base font-bold text-white">서울정수초등학교</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Experience -->
+                <div>
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="p-2 bg-cyan-500/10 rounded-lg text-cyan-400">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">리더십 경력</h2>
+                    </div>
+
+                    <div class="bg-navy-900/80 border border-slate-800 rounded-2xl p-6">
+                        <div class="inline-block px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-300 text-xs font-semibold mb-3">
+                            주요 활동
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">서경대학교 군사학과 부학생회장</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            학과 집행부를 주도적으로 운영하고 주요 행사를 기획·지원하였습니다. 선후배 간의 활발한 소통을 이끄는 가교 역할을 수행하며 책임감과 조직 관리 능력을 키웠습니다.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400"></i>
+                                학과 행사 및 학술 활동 총괄 지원
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400"></i>
+                                구성원 간 협력과 소통 증진을 위한 소통 창구 역할
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Vision -->
+    <section id="vision" class="py-16 border-t border-slate-800/80 bg-gradient-to-b from-navy-900/50 to-navy-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="p-3 bg-cyan-500/10 rounded-full text-cyan-400 w-fit mx-auto mb-6">
+                <i data-lucide="compass" class="w-8 h-8"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">비전 & 최종 목표</h2>
+            <p class="text-cyan-400 font-semibold mb-6">"해군 특전부대(UDT/SEAL) 정예 장교 임관"</p>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-8">
+                군사학의 지략과 스포츠앤테크놀로지의 신체 과학적 접근을 유기적으로 융합하겠습니다. 
+                끊임없는 피지컬 단련과 리더십을 바탕으로, 국가와 국민을 위해 솔선수범하여 임무를 완수하는 최정예 지휘관이 되겠습니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="border-t border-slate-800 py-12 bg-navy-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="text-lg font-bold text-white">김수원 (Suwon Kim)</h3>
+                    <p class="text-xs text-slate-400 mt-1">서경대학교 군사학과 | 해군 특전 장교 지망</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="tel:010-4088-174x" class="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg transition-colors">
+                        <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+                        010-4088-174x
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800/50 mt-8 pt-6 text-center text-xs text-slate-500">
+                &copy; Suwon Kim. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icon Renderer Script -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
